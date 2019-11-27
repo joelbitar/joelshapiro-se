@@ -43,4 +43,4 @@ workflows:
   build:
     jobs:
       - build
-      - deploy:
+      - deploy
