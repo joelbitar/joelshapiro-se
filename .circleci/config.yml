@@ -57,7 +57,7 @@ workflows:
           filters:
             branches:
               ignore: master
-      - build-deploy-to-firebase:
+      - build-and-deploy-to-firebase:
           filters:
             branches:
               only: master
