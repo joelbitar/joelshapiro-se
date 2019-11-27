@@ -23,7 +23,7 @@ jobs:
       - run:
           name: Gatsby Build
           command: npm run build
-  deploy:
+  deploy2firebase:
     docker:
       - image: circleci/node:10
     working_directory: ~/joelshapiro-gatsby
@@ -43,4 +43,9 @@ workflows:
   build:
     jobs:
       - build
-      - deploy
+      - deploy2firebase:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
