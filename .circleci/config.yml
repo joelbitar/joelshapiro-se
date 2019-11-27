@@ -23,17 +23,11 @@ jobs:
       - run:
           name: Gatsby Build
           command: npm run build
-  deploy2firebase:
+  deploy-to-firebase:
     docker:
       - image: circleci/node:10
     working_directory: ~/joelshapiro-gatsby
     steps:
-      - restore_cache:
-          keys:
-            # Find a cache corresponding to this specific package-lock.json
-            - v1-npm-deps-{{ checksum "package-lock.json" }}
-            # Fallback cache to be used
-            - v1-npm-deps-
       - run:
           name: Firebase Deploy
           command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
@@ -43,7 +37,7 @@ workflows:
   build:
     jobs:
       - build
-      - deploy2firebase:
+      - deploy-to-firebase:
           requires:
             - build
           filters:
