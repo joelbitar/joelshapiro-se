@@ -36,6 +36,9 @@ jobs:
             # Fallback cache to be used
             - v1-npm-deps-
       - run:
+          name: Install Dependencies
+          command: npm install
+      - run:
           name: Firebase Deploy
           command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
 
