@@ -11,6 +11,7 @@ const IndexPage = () => (
     <h1>Joel Shapiro</h1>
     <p>Min hemsida</p>
     <p>Testar automatiskt bygge med circleci pushat till firebase</p>
+    <p>Med PR...</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
