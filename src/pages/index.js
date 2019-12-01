@@ -11,10 +11,11 @@ const IndexPage = () => (
     <h1>Joel Shapiro</h1>
     <p>Min hemsida</p>
     <p>Vad ska jag ha här egentligen?</p>
+    <p>Döskallar kansek?</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
   </Layout>
 )
 
-export default IndexPag_e
+export default IndexPage
